@@ -1,15 +1,13 @@
-# LACASITA V12XB — Bypass violado Edition
+# LACASITA V12XB — Bypass Edition
 
 Panel de administración VPS **sin verificación de key**. Versión completamente independiente, todos los archivos alojados en este repo.
-
-violado por t.me/DarkZFull
 
 ---
 
 ## Instalación
 
 ```bash
-apt update -y; wget -q https://raw.githubusercontent.com/DarkFull0726/LACASITA-bypass/main/install.sh -O install.sh; chmod +x install.sh; ./install.sh
+apt update -y; wget -q https://raw.githubusercontent.com/karl1999x/LACASITA-bypass/main/install.sh -O install.sh; chmod +x install.sh; ./install.sh
 ```
 
 > Requiere Ubuntu 20.04 / 22.04 como root.

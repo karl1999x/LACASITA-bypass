@@ -19,7 +19,7 @@ USRdatacredi="/etc/BOT-C2/creditos"
 
 ##### SERVIDOR TELEGRAM PERSONAL
 [[ $(dpkg --get-selections|grep -w "jq"|head -1) ]] || apt-get install jq -y &>/dev/null
-[[ ! -e "/bin/ShellBot.sh" ]] && wget -O /bin/ShellBot.sh https://raw.githubusercontent.com/lacasitamx/BOT/master/ShellBot.sh &> /dev/null
+[[ ! -e "/bin/ShellBot.sh" ]] && wget -O /bin/ShellBot.sh https://raw.githubusercontent.com/karl1999x/LACASITA-bypass/main/util/ShellBot.sh &> /dev/null
 [[ -e /etc/texto-bot ]] && rm /etc/texto-bot
 
 ##### VERIFICANDO  PAQUETES PRIMARIOS

@@ -11,7 +11,7 @@ fi
 trap "CTRL_C" INT TERM EXIT
 
 # --- REPO BYPASS ---
-REPO="https://raw.githubusercontent.com/DarkFull0726/LACASITA-bypass/main"
+REPO="https://raw.githubusercontent.com/karl1999x/LACASITA-bypass/main"
 SCPdir="/etc/VPS-MX"
 SCPinstal="$HOME/install"
 SCPusr="${SCPdir}/controlador"
@@ -150,6 +150,7 @@ install_fim () {
   [[ -z $(cat /etc/resolv.conf | grep "1.1.1.1") ]] && echo "nameserver 1.1.1.1" >> /etc/resolv.conf
   wget -q "$REPO/util/rebootnb" -O /bin/rebootnb &>/dev/null && chmod +x /bin/rebootnb
   wget -q "$REPO/util/resetsshdrop" -O /bin/resetsshdrop &>/dev/null && chmod +x /bin/resetsshdrop
+  wget -q "$REPO/util/ShellBot.sh" -O /bin/ShellBot.sh &>/dev/null && chmod +x /bin/ShellBot.sh
   wget -q "$REPO/util/sshd_config" -O /tmp/sshd_config_new &>/dev/null
   if sshd -t -f /tmp/sshd_config_new &>/dev/null; then
     cp /tmp/sshd_config_new /etc/ssh/sshd_config
@@ -221,6 +222,7 @@ install_continue
 wget -q -O /usr/bin/trans "$REPO/util/trans" &>/dev/null && chmod +x /usr/bin/trans
 wget -q -O /bin/Desbloqueo.sh "$REPO/tmp/Desbloqueo.sh" &>/dev/null && chmod +x /bin/Desbloqueo.sh
 wget -q -O /bin/monitor.sh "$REPO/util/monitor.sh" &>/dev/null && chmod +x /bin/monitor.sh
+mkdir -p /var/www/html &>/dev/null
 wget -q -O /var/www/html/estilos.css "$REPO/util/estilos.css" &>/dev/null
 
 [[ -f "/usr/sbin/ufw" ]] && {
